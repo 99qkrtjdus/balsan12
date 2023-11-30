@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>11월 패밀리 좌담회</title>
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/colorbox.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.fullPage.js"></script>
+  <script src="js/jquery.colorbox.js"></script>
+  <script>
+  	$(document).ready(function(){
+  		$("#fullpage").fullpage({
+  			menu: "#topmenu",
+  			navigation:true,
+  			slideNavigation:true
+  		});
+
+      $(".modal").colorbox({
+        innerWidth:1500,
+        innerHeight:800
+      });
+  	});
+  </script>
+
+  <style>
+    /*reset*/
+    *{padding: 0; margin: 0; box-sizing: border-box;}
+    li{list-style: none;}
+    a:visited,a:link{text-decoration: none; color: #000;}
+    .clearfix:after{display: block; clear: both; content: "";}
+
+    /* nav */
+    nav#navTop{
+      width: 1000px;
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+    ul#topmenu{
+      display: table;
+      width: 90%;
+      margin: 20px auto;
+      border: 2px solid #fff;
+    }
+
+    nav#navTop li{
+      display: table-cell;
+      /*background-color: #77b193;*/
+    }
+
+    nav#navTop li:first-child{border-left: none;}
+    nav#navTop li:hover a{background-color: #fff; color: #000;}
+    nav#navTop li.active a{background-color: #fff; color: #000;}
+    nav#navTop li a{
+      display: block;
+      line-height: 40px;
+      text-align: center;
+      padding: 0 5px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .active{background-color: #000; color: #fff;}
+
+
+    /* fullpage 시작 */
+    #fullpage{} 
+    #page1{background-image: url(images/1.png);}
+    #page2{background-image: url(images/2.png);}
+    #page3{background-image: url(images/3.png);}
+    #page4{background-image: url(images/4.png); position: relative;}
+    #page5{background-image: url(images/5.png);}
+    #page6{background-image: url(images/6.png);}
+
+
+    .page{
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+
+    /*영상물*/
+    .linkbox{position: absolute; left: 850px; top: 650px;}
+    .link{width: 100px; height: 20px; margin-bottom: 20px;}
+    .a-style{color: #fff; font-weight: 600;}
+
+    /*행복대화*/
+    .container{margin-top: 150px;}
+    .box{width: 1660px; margin: 0 auto;}
+    #boxa{float: left; width: 400px; height: 400px; margin-right: 20px; margin-bottom: 20px;}
+    #boxa:last-child{margin-right: 0px;}
+    #imgbox{display: block; width: 400px; height: 400px;}   
+  </style>
+
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav id="navTop">
+      <ul id="topmenu" class="clearfix">
+        <li><a href="#1st">메인</a></li>
+        <li><a href="#2st">여는글</a></li>
+        <li><a href="#3st">어서배독</a></li>
+        <li><a href="#4st">영상물상영</a></li>
+        <li><a href="#5st">대화의광장</a></li>
+        <li><a href="#6st">참석간부인사</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="fullpage">
+    <div class="section page" id="page1" data-anchor="1st"></div>
+
+    <div class="section page" id="page2" data-anchor="2st"></div>
+
+    <div class="section page" id="page3" data-anchor="3st"></div>
+
+    <div class="section page" id="page4" data-anchor="4st">
+      <div class="linkbox">
+        <a href="https://www.youtube.com/embed/3M40x8DNUXI?si=RlbRi_25Gy55-iOa" class="link" target="_blank"><span class="a-style">- 신문 읽어주는 여자(11.24)</span> <br></a>
+        <a href="https://www.youtube.com/embed/XvuaPZePXKY?si=vLjtKo0nXWKf0AhX" class="link" target="_blank"><span class="a-style">- 신문 읽어주는 여자(12.01)</span></a>
+      </div>
+    </div>
+
+    <div class="section page" id="page5" data-anchor="5st">   
+      <div class="container">
+        <div class="box clearfix">
+          <a href="images/dhbg1-1.png" id="boxa" class="modal"><img src="images/dhbg1.jpg" alt="#" id="imgbox"></a>
+          <a href="images/dhbg2-1.png" id="boxa" class="modal"><img src="images/dhbg2.jpg" alt="#" id="imgbox"></a>
+          <a href="images/dhbg3-1.png" id="boxa" class="modal"><img src="images/dhbg3.jpg" alt="#" id="imgbox"></a>
+          <a href="images/dhbg4-1.png" id="boxa" class="modal"><img src="images/dhbg4.jpg" alt="#" id="imgbox"></a>
+        </div>  
+      </div>
+    </div>
+
+    <div class="section page" id="page6" data-anchor="6st"></div>
+  </div> 
+</body>
+</html>
+
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+ 
